@@ -45,7 +45,7 @@ export default {
         fetchStateData(){
             this.$stateService.getOne(this.state.name).then(data => {
                 this.state = data
-                this.zoom = data.zoom * 1.5
+                this.zoom = data.zoom * 1.1
                 this.center = [data.lat, data.lon]
                 this.$refs.stateMap.mapObject.flyTo(this.center, this.zoom)
 }).catch(err => console.err(err))
