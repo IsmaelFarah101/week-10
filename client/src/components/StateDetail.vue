@@ -17,6 +17,7 @@
 
 </template>
 <script>
+//importing the maps libraries
 import {LMap ,LTileLayer} from 'vue2-leaflet'
 
 export default {
@@ -26,6 +27,7 @@ export default {
     },
     data(){
         return {
+            //specifying the data needed to display it
             state: {
                 name: ''
             },
@@ -36,12 +38,14 @@ export default {
         
         }
     },
+    //this loads the api requests in methods and applys vlaues in the statemap
     mounted(){
         this.state.name = this.$route.params.state
         this.$refs.stateMap.mapObject.dragging.disable()
         this.fetchStateData()
     },
     methods: {
+        //this fetches the specified state data and implements it
         fetchStateData(){
             this.$stateService.getOne(this.state.name).then(data => {
                 this.state = data

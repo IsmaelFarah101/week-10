@@ -9,6 +9,8 @@
 </template>
 <script>
 export default {
+    //this component displays a breif summary of the state
+    //data is passed from the parent component and is display whether it is true or false
     name: 'Summary',
     props:{
         total:Number,

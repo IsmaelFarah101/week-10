@@ -9,6 +9,7 @@
 </div>    
 </template>
 <script>
+//the header contains and jumbotron and some text
 export default {
     name: 'Header'
     }

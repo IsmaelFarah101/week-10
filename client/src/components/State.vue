@@ -15,6 +15,8 @@
 </template>
 <script>
 export default {
+    //this state data is passed from the parrent and is displayed
+    //if the checkbox is clicked or unclicked the change is emited to the parent component
     name: 'State',
     props: {
         state: Object

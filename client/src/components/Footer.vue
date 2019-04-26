@@ -17,6 +17,7 @@
     </div>
 </template>
 <script>
+// the footer contains the picture and image refrences and routes to the different components
 export default {
     name:'Footer'    
 }

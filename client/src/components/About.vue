@@ -6,6 +6,7 @@
     </div>    
 </template>
 <script>
+//this is a component that displays basuic information about the site
 export default {
     name: 'About'
 }

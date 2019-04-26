@@ -15,6 +15,7 @@
     </div>
 </template>
 <script>
+//importing different components and passing data through them at the top
 import State from '../components/State'
 import Summary from '../components/Summary'
 export default {
@@ -31,6 +32,7 @@ export default {
         this.getAll()
     },
     methods: {
+        //these methods are making api requests on to get all the data and the other to update it
         getAll(){
             this.$stateService.getAll().then(data => {
                 this.states = data
@@ -43,6 +45,7 @@ export default {
                 })
         }
     },
+    //this values are computed and change depeding on the data in the array they return the total and a boolean if all states are picked
     computed: {
         totalVisited(){
             let visited = this.states.filter(function(state){
